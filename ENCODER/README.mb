@@ -1,0 +1,47 @@
+# 4-to-2 Encoder using Verilog
+
+## Description
+
+This project implements a **4-to-2 Encoder** in Verilog HDL.
+
+The encoder converts one active input line into a 2-bit binary output.
+
+### Inputs
+
+- D0
+- D1
+- D2
+- D3
+
+> **Note:** Only one input should be HIGH (1) at a time.
+
+### Outputs
+
+- Y1
+- Y0
+
+## Truth Table
+
+| D3 | D2 | D1 | D0 | Y1 | Y0 |
+|----|----|----|----|----|----|
+|0|0|0|1|0|0|
+|0|0|1|0|0|1|
+|0|1|0|0|1|0|
+|1|0|0|0|1|1|
+
+## Files
+
+- `encoder.v` – Encoder module
+- `encoder_tb.v` – Testbench
+
+## Compile
+
+```bash
+iverilog -o encoder encoder.v encoder_tb.v
+```
+
+## Run
+
+```bash
+vvp encoder
+```
